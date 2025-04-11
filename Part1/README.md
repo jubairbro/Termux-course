@@ -27,10 +27,13 @@ Termux ইন্টারফেস পরিচিতি
 ---
 
 ১. Termux Update ও Upgrade
+
+
 ```bash
 pkg update -y
 pkg upgrade -y```
 
+সংক্ষিপ্ত ২ টা এক সাথে pkg up
 
 ---
 
@@ -41,7 +44,7 @@ apt install <প্যাকেজ_নাম>```
 
 উদাহরণ:
 
-```
+```bash
 pkg install git
 pkg install curl
 pkg install python```
@@ -50,6 +53,8 @@ pkg install python```
 ---
 
 ৩. সাহায্যের জন্য
+
+
 ```bash
 <কমান্ড> --help```
 
@@ -62,6 +67,8 @@ pkg install python```
 ---
 
 ৫. Python ও Git ইনস্টলেশন
+
+
 ```bash
 pkg install python -y
 pkg install git -y```
@@ -70,6 +77,8 @@ pkg install git -y```
 ---
 
 #৬. স্টোরেজ পারমিশন (sdcard অ্যাক্সেস)
+
+
 ```bash
 termux-setup-storage```
 
@@ -77,6 +86,8 @@ termux-setup-storage```
 ---
 
 #৭. ফাইল এডিটর ইনস্টল (nano)
+
+
 ```bash
 pkg install nano
 nano filename.txt```
@@ -85,7 +96,9 @@ nano filename.txt```
 ---
 
 #৮. Git ক্লোন এবং রান
-```
+
+
+```bash
 git clone <repo-url>
 cd <foldername>
 bash script.sh```
@@ -94,6 +107,8 @@ bash script.sh```
 ---
 
 ৯. সেশন ক্লিয়ার / Exit
+
+
 ```bash
 clear      # টার্মিনাল পরিস্কার
 exit       # Termux থেকে বের হওয়া
@@ -102,6 +117,8 @@ exit       # Termux থেকে বের হওয়া
 ---
 
 ১০. অতিরিক্ত দরকারি প্যাকেজসমূহ (suggested)
+
+
 ```bash
 pkg install unzip
 pkg install wget
