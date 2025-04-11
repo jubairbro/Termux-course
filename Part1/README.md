@@ -1,140 +1,125 @@
-# Termux কী, কীভাবে কাজ করে এবং প্রয়োজনীয় বেসিক কমান্ডগুলো সুন্দরভাবে দেওয়া আছে:
+# Termux ক্লাস: দিন ১ - বেসিক কমান্ড শিখি
 
-
----
-
-Termux ক্লাস - প্রথম দিন: বেসিক পরিচিতি ও কমান্ড
-
-Termux কী?
-
-Termux একটি Android টার্মিনাল এমুলেটর ও লিনাক্স এনভায়রনমেন্ট যা মোবাইলেই প্রোগ্রামিং, টুল রান করা, স্ক্রিপ্ট চালানো, হ্যাকিং প্র্যাকটিস ইত্যাদি করতে সাহায্য করে।
-
+Termux হলো Android এর জন্য একটি শক্তিশালী Linux টার্মিনাল অ্যাপ। এই ক্লাসে আমরা শেখবো Termux ওপেন করার পর দরকারি বেসিক কমান্ডগুলো।
 
 ---
 
-প্রথম দিনের লক্ষ্য:
-
-Termux ইন্টারফেস পরিচিতি
-
-কমান্ড লাইন বেসিক
-
-দরকারি প্যাকেজ ইনস্টল
-
-ফাইল ও ডিরেক্টরি ব্যবস্থাপনা
-
-
-
----
-
-১. Termux Update ও Upgrade
-
-
+## ১. Termux আপডেট ও আপগ্রেড
 ```bash
 pkg update -y
-pkg upgrade -y```
-
-সংক্ষিপ্ত ২ টা এক সাথে pkg up
-
----
-
-২. প্যাকেজ ম্যানেজমেন্ট
-```bash
-pkg install <প্যাকেজ_নাম>
-apt install <প্যাকেজ_নাম>```
-
-উদাহরণ:
-
-```bash
-pkg install git
-pkg install curl
-pkg install python```
-
-
----
-
-৩. সাহায্যের জন্য
-
-
-```bash
-<কমান্ড> --help```
-
-
----
-
-#৪. ফাইল ও ডিরেক্টরি ম্যানেজমেন্ট
-
-
----
-
-৫. Python ও Git ইনস্টলেশন
-
-
-```bash
-pkg install python -y
-pkg install git -y```
-
-
----
-
-#৬. স্টোরেজ পারমিশন (sdcard অ্যাক্সেস)
-
-
-```bash
-termux-setup-storage```
-
-
----
-
-#৭. ফাইল এডিটর ইনস্টল (nano)
-
-
-```bash
-pkg install nano
-nano filename.txt```
-
-
----
-
-#৮. Git ক্লোন এবং রান
-
-
-```bash
-git clone <repo-url>
-cd <foldername>
-bash script.sh```
-
-
----
-
-৯. সেশন ক্লিয়ার / Exit
-
-
-```bash
-clear      # টার্মিনাল পরিস্কার
-exit       # Termux থেকে বের হওয়া
+pkg upgrade -y
 ```
 
 ---
 
-১০. অতিরিক্ত দরকারি প্যাকেজসমূহ (suggested)
-
-
+## ২. দরকারি প্যাকেজ ইনস্টল
 ```bash
-pkg install unzip
-pkg install wget
-pkg install neofetch
-pkg install openssh```
-
+pkg install git -y
+pkg install python -y
+pkg install curl -y
+pkg install wget -y
+pkg install nano -y
+pkg install unzip -y
+pkg install zip -y
+pkg install neofetch -y
+```
 
 ---
 
-১১. টার্মিনাল স্টাইল দেখতে
+## ৩. স্টোরেজ পারমিশন নিতে (sdcard access)
 ```bash
-neofetch```
-
-
-
-#আজকে এই পর্যন্ত থাকুক আগামী পর্বে আরো শিখবো ইনশাআল্লাহ। 
+termux-setup-storage
+```
 
 ---
 
+## ৪. ফাইল ও ফোল্ডার ম্যানেজমেন্ট
+
+| কাজ                                | কমান্ড                           |
+|-----------------------------------|----------------------------------|
+| বর্তমান লোকেশন জানতে              | `pwd`                            |
+| ফোল্ডারে থাকা ফাইলগুলো দেখতে     | `ls`                             |
+| হিডেন ফাইলসহ দেখতে               | `ls -a`                          |
+| ফোল্ডার তৈরি করতে                 | `mkdir FolderName`              |
+| ফোল্ডারে ঢুকতে                    | `cd FolderName`                 |
+| এক ধাপ পেছনে যেতে                 | `cd ..`                          |
+| একসাথে পিছনে যেতে                | `cd ../../`                     |
+| ফাইল তৈরি করতে                    | `touch file.txt`                |
+| ফাইল লিখতে                        | `nano file.txt`                 |
+| ফাইলের কনটেন্ট দেখতে             | `cat file.txt`                  |
+| ফাইল ডিলিট করতে                   | `rm file.txt`                   |
+| ফোল্ডার সহ ডিলিট করতে             | `rm -rf FolderName`             |
+| ফাইল কপি করতে                     | `cp file1.txt newfile.txt`      |
+| ফাইল কাট-পেস্ট করতে               | `mv file.txt /new/location/`    |
+
+---
+
+## ৫. Bash স্ক্রিপ্ট চালানো
+```bash
+chmod +x script.sh   # রান করার পারমিশন দেওয়া
+./script.sh          # স্ক্রিপ্ট চালানো
+```
+
+---
+
+## ৬. Git ব্যবহার করে প্রজেক্ট ক্লোন করা
+```bash
+git clone https://github.com/user/repo.git
+cd repo
+ls
+```
+
+---
+
+## ৭. README.md ফাইল তৈরি করা (প্রজেক্ট ইনফো রাখার জন্য)
+```bash
+touch README.md
+nano README.md
+```
+
+**উদাহরণ (README.md):**
+```markdown
+# আমার প্রজেক্ট
+
+এটি একটি টার্মিনাল প্রজেক্ট।
+
+## চালানোর নিয়ম:
+```bash
+bash setup.sh
+```
+```
+
+---
+
+## ৮. সিস্টেম তথ্য দেখতে
+```bash
+neofetch
+```
+
+---
+
+## ৯. টার্মিনাল পরিস্কার ও বের হওয়া
+```bash
+clear     # স্ক্রিন ক্লিয়ার
+exit      # Termux থেকে বের হওয়া
+```
+
+---
+
+## ১০. সাহায্য ও ম্যানুয়াল দেখতে
+```bash
+<command> --help
+man <command>
+```
+
+---
+
+## ✅ পরবর্তী ক্লাসে:
+- Bash চালানো
+- Python স্ক্রিপ্ট চালানো
+- টুল বানানোর (ধারণা) 
+  
+---
+
+**Creator :** Jubair Bro  
+**Telegram :** [https://t.me/JubairFF](https://t.me/JubairFF)
