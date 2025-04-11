@@ -27,94 +27,97 @@ Termux ইন্টারফেস পরিচিতি
 ---
 
 ১. Termux Update ও Upgrade
-
+```bash
 pkg update -y
-pkg upgrade -y
+pkg upgrade -y```
 
 
 ---
 
 ২. প্যাকেজ ম্যানেজমেন্ট
-
+```bash
 pkg install <প্যাকেজ_নাম>
-apt install <প্যাকেজ_নাম>
+apt install <প্যাকেজ_নাম>```
 
 উদাহরণ:
 
+```
 pkg install git
 pkg install curl
-pkg install python
+pkg install python```
 
 
 ---
 
 ৩. সাহায্যের জন্য
-
-<কমান্ড> --help
-man <কমান্ড>
+```bash
+<কমান্ড> --help```
 
 
 ---
 
-৪. ফাইল ও ডিরেক্টরি ম্যানেজমেন্ট
+#৪. ফাইল ও ডিরেক্টরি ম্যানেজমেন্ট
 
 
 ---
 
 ৫. Python ও Git ইনস্টলেশন
-
+```bash
 pkg install python -y
-pkg install git -y
+pkg install git -y```
 
 
 ---
 
-৬. স্টোরেজ পারমিশন (sdcard অ্যাক্সেস)
-
-termux-setup-storage
+#৬. স্টোরেজ পারমিশন (sdcard অ্যাক্সেস)
+```bash
+termux-setup-storage```
 
 
 ---
 
-৭. ফাইল এডিটর ইনস্টল (nano)
-
+#৭. ফাইল এডিটর ইনস্টল (nano)
+```bash
 pkg install nano
-nano filename.txt
+nano filename.txt```
 
 
 ---
 
-৮. Git ক্লোন এবং রান
-
+#৮. Git ক্লোন এবং রান
+```
 git clone <repo-url>
 cd <foldername>
-bash script.sh
+bash script.sh```
 
 
 ---
 
 ৯. সেশন ক্লিয়ার / Exit
-
+```bash
 clear      # টার্মিনাল পরিস্কার
 exit       # Termux থেকে বের হওয়া
-
+```
 
 ---
 
 ১০. অতিরিক্ত দরকারি প্যাকেজসমূহ (suggested)
-
+```bash
 pkg install unzip
 pkg install wget
 pkg install neofetch
-pkg install openssh
+pkg install openssh```
 
 
 ---
 
 ১১. টার্মিনাল স্টাইল দেখতে
+```bash
+neofetch```
 
-neofetch
 
+
+#আজকে এই পর্যন্ত থাকুক আগামী পর্বে আরো শিখবো ইনশাআল্লাহ। 
 
 ---
 
